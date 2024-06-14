@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+</head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: beige;
+}
+i{
+    font-size: 50px;
+    position: absolute;
+    bottom: 720px;
+}
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateY(180deg);
+    display: flex;
+}
+.wrapper input {
+    display: none;
+}
+.wrapper label {
+    display: block;
+    cursor: pointer;
+    width: 150px;
+}
+.wrapper label:before {
+    content: '★';
+    position: relative;
+    display: block;
+    font-size: 150px;
+    color: #DFCAA0;
+}
+.wrapper label:after {
+    content: '★';
+    position: absolute;
+    display: block;
+    font-size: 150px;
+    color: #b0954c;
+    top: 0;
+    opacity: 0;
+    transition: .6s;
+}
+.wrapper label:hover:after, .wrapper label:hover~label:after, .wrapper input:checked~label:after {
+    opacity: 1;
+}
+h1{
+    font-family: papyrus;
+    font-size: 100px;
+    text-align: center;
+    color: #b0954c;
+    margin-top: 100px;
+
+}
+a{
+    font-size: 20px;
+    text-align: left;
+    font-family: papyrus;
+    color:  #b0954c;
+    text-decoration: none;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+</style>
+
+
+<head>
+	<meta charset="UTF-8">
+	<title>Rate us</title>
+	<link href="style.css" rel="stylesheet">
+</head>
+<h1>Rate us!</h1>
+<body>
+	<div class="wrapper">
+		<div class="wrapper">
+ <input type="radio" name="rate" id="rate1">
+ <label for="rate1"></label>
+ <input type="radio" name="rate" id="rate2">
+ <label for="rate2"></label>
+ <input type="radio" name="rate" id="rate3">
+ <label for="rate3"></label>
+ <input type="radio" name="rate" id="rate4">
+ <label for="rate4"></label>
+ <input type="radio" name="rate" id="rate5">
+ <label for="rate5"></label>
+</div>
+	</div>
+
+    <a href="home.html" class="previous"><i class="fa-solid fa-arrow-left-long"></i></a>
+</body>
+</html>
+

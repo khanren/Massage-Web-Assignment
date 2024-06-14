@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<style>
+  .navigationbar {
+    background-color: #dfcaa0;
+  position: fixed;
+  top: 0;
+    z-index: 100;
+    font-size: 20px;
+    overflow: auto;
+    height: 80px;
+}
+  .background {
+  background-color:#fffde7 ;
+  display: flex;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 0 1 800px;
+  margin: auto;
+  padding: -50px;
+}
+
+.screen {
+  position: relative;
+  background: #3e3e3e;
+  border-radius: 15px;
+}
+
+.screen:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+  z-index: -1;
+}
+
+.screen-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background: #4d4d4f;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.screen-header-button {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 3px;
+  border-radius: 8px;
+  background: white;
+}
+
+.screen-header-button.close {
+  background: #ed1c6f;
+}
+
+.screen-header-button.maximize {
+  background: #e8e925;
+}
+
+.screen-header-button.minimize {
+  background: #74c54f;
+}
+
+.screen-body {
+  display: flex;
+}
+
+.screen-body-item {
+  flex: 1;
+  padding: 20px;
+}
+
+.app-title {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: #cfb284;
+  font-size: 26px;
+}
+
+.app-title:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 25px;
+  height: 4px;
+  background: #cfb284;
+}
+
+.app-form-group {
+  margin-bottom: 15px;
+}
+
+.app-form-group.buttons {
+  margin-bottom: 0;
+  text-align: right;
+}
+
+.app-form-control {
+  width: 100%;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #666;
+  color: #ddd;
+  font-size: 14px;
+  outline: none;
+  transition: border-color .2s;
+}
+
+.app-form-button { 
+  background: none;
+  border: none;
+  color: #cfb284;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+}
+.navigationbar {
+  background-color: #dfcaa0;
+  position: sticky;
+  margin-top: 0;
+  top: 0;
+  z-index: 100;
+  font-size: 20px;
+}
+
+.app-form-button:hover {
+  color: #cfb284;
+}
+ul{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center ;
+  width: 100%;
+}
+ul li a{
+    text-decoration: none;
+    color: #9C6137;
+    padding:5px 20px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+}
+body{
+  background-color: #fffde7;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif;
+}
+  </style>
+  <body>
+  <div class="navigationbar">
+    <ul class="navigationbar">
+        <li><a href="home.html" class="nav-link text-uppercase font-weight-bold js-scroll-trigger">Home</a></li>
+        <li><a href="home.html#about" class="nav-link text-uppercase font-weight-bold js-scroll-trigger"> About</a></li>
+        <li><a href="home.html#services" class="nav-link text-uppercase font-weight-bold js-scroll-trigger"> Services</a></li>
+        <li><a href="contactus.html" class="nav-link text-uppercase font-weight-bold js-scroll-trigger"> Contact us</a></li>
+        <li><a href="StaffLogin.html"> Staff Login</a></li>
+        <li><a href="CustomerLogin.html"> Customer Login</a></li>
+        <li><a href="CustomerSignup.html"> Signup</a></li>
+    </ul>
+  </div>
+<section id="contact" class="slider-area"></section>
+        <div class="background">
+            <div class="container">
+              <div class="screen">
+                <div class="screen-header">
+                  <div class="screen-header-left">
+                    <div class="screen-header-button close"></div>
+                    <div class="screen-header-button maximize"></div>
+                    <div class="screen-header-button minimize"></div>
+                  </div>
+                </div>
+                <div class="screen-body">
+                  <div class="screen-body-item left">
+                    <div class="app-title">
+                        <a><br><br>CONTACT US</a>
+                    </div>
+                  </div>
+                  <div class="screen-body-item">
+                    <div class="app-form">
+                      <div class="app-form-group">
+                        <input class="app-form-control" placeholder="NAME"></div>
+                      <div class="app-form-group">
+                        <input class="app-form-control" placeholder="EMAIL"></div>
+                      <div class="app-form-group">
+                        <input class="app-form-control" placeholder="CONTACT NO"></div>
+
+                      <div class="app-form-group message">
+                        <input class="app-form-control" placeholder="MESSAGE"></div>
+
+                      <div class="app-form-group buttons">
+                        <button class="app-form-button">SEND</button></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </body>
+</html>

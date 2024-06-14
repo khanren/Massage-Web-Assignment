@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  background-image: url("https://www.besthealthmag.ca/wp-content/uploads/2020/09/benefits-of-massage-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: 1500px 850px;
+  color: #9C6137;
+}
+
+h2 {
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+.navigationbar {
+    background-color: #dfcaa0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    font-size: 20px;
+    overflow: auto;
+    height: 80px;
+}
+
+
+html{
+  scroll-behavior: smooth;
+}
+
+.container {
+    height: 520px;
+    width: 400px;
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+input[type=submit] {
+  background-color: #BE5504;
+  border: none;
+  color: white;
+  font-size: 15px;
+  padding: 15px;
+  width: 100%;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  cursor: pointer;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+a {
+  text-decoration: none;
+  color: #9C6137;
+}
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.signup {
+  color: white;
+  font-size: 15px;
+  font-family: 'Poppins',sans-serif;
+  text-align: center;
+}
+
+.signup a{
+  color: dodgerblue;
+  text-decoration: none;
+}
+
+.signup a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif;
+}
+
+img{
+  border-radius: 50%;
+}
+
+.navigationbar {
+  background-color: #dfcaa0;
+	position: sticky;
+  margin-top: auto;
+	top: 0;
+  z-index: 100;
+  font-size: 20px;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+ul{
+  list-style-type: none;  
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center ;
+  width: 100%;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #9C6137;
+    padding:5px 20px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+}
+
+</style>
+</head>
+<body>
+<header>
+<div class="navigationbar">
+            <ul class="navigationbar">
+                <li><a href="home.html" class="nav-link text-uppercase font-weight-bold js-scroll-trigger"> Home</a></li>
+                <li><a href="home.html#about" class="nav-link text-uppercase font-weight-bold js-scroll-trigger"> About</a></li>
+                <li><a href="home.html#services" class="nav-link text-uppercase font-weight-bold js-scroll-trigger"> Services</a></li>
+                <li><a href="contactus.html" class="nav-link text-uppercase font-weight-bold js-scroll-trigger"> Contact us</a></li>
+                <li><a href="StaffLogin.html"> Staff Login</a></li>
+                <li><a href="CustomerLogin.html"> Customer Login</a></li>
+                <li><a href="CustomerSignup.html"> Signup</a></li>
+            </ul>
+        </div>
+ </header>
+<form action="bookingpage.html">
+  <div class="container">
+    <h2>Login Form</h2>
+    <hr>
+    <label for="email"><b>Email:</b></label><br>
+    <input type="text" placeholder="Email Address" name="email"><br>
+	  <label for="pwd"><b>Password:</b></label><br>
+    <input type="password" placeholder="Enter Password" name="pwd"> 
+    <a href="checkuser.html">Forgot Password?</a><br><br>
+    <input type="submit" value="LOGIN">
+
+  <div class="signup">Don't have a account?
+    <a href="CustomerSignup.html">Signup now</a>
+  </div>
+
+  </div>
+</form>
+</body>

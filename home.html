@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html>
+<title>Massage</title>
+      <link rel="stylesheet" href="assignment.css">
+<head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif;
+}
+.navigationbar {
+  	background-color: #dfcaa0;
+	position: fixed;
+	top: 0;
+  	z-index: 100;
+    font-size: 20px;
+    overflow: auto;
+    height: 80px;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+h1{
+	font-family: papyrus;
+	font-size: 65px;
+	text-align: center;
+	color: #cfb284;
+}
+h3{
+	font-family: papyrus;
+	font-size: 20px;
+	text-align: center;
+	color: #cfb284;
+}
+
+ul{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center ;
+  width: 100%;
+}
+ul li a{
+    text-decoration: none;
+    color: #9C6137;
+    padding:5px 20px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+}
+body{
+	background: url('transparent logo.png');
+    background-size: 100%;
+    background-color: #fffde7;
+    margin: 0;
+    background-repeat: no-repeat;
+}
+.about{
+    background-size: 100%;
+    margin-top: 10%;
+    background-color:#fffde7 ;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+}
+
+.about-heading{
+    font-size: 60px;
+    margin-top: 35%;
+    text-align: center;
+    color: #cfb284;
+    font-family:papyrus ;
+}
+.about-font-size{
+  text-align: center;
+  font-size: 30px;
+  line-height: 1.7;
+  color: #9C6137;
+  font-family:papyrus;
+  margin-left: 8%;
+  margin-right: 8%;
+  margin-top: 5%;
+}
+
+.services{
+    margin-top: 10%;
+    background-color:#fffde7 ;
+    height: 800px;
+    width: 100%;
+}
+
+.services-heading{
+    font-size: 60px;
+    margin-top: 35%;
+    text-align: center;
+    color: #cfb284;
+    font-family:papyrus ;
+}
+
+services-img img{
+	width: 40px;
+	height: 30px;
+}
+.background {
+  background-color:#fffde7 ;
+  display: flex;
+  min-height: 10;
+}
+
+.container {
+  flex: 0 1 800px;
+  margin: auto;
+  padding: -50px;
+  height: 50%;
+}
+
+.screen {
+  position: relative;
+  background: #3e3e3e;
+  border-radius: 15px;
+  margin-top: 650px;
+  margin-bottom: 50px;
+}
+
+.screen:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+  z-index: -1;
+}
+.screen-header-button {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 3px;
+  border-radius: 8px;
+  background: white;
+}
+
+.screen-header-button.close {
+  background: #ed1c6f;
+}
+
+.screen-header-button.maximize {
+  background: #e8e925;
+}
+
+.screen-header-button.minimize {
+  background: #74c54f;
+}
+
+.screen-body {
+  display: flex;
+}
+
+.screen-body-item {
+  flex: 1;
+  padding: 20px;
+}
+
+.app-title {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: #cfb284;
+  font-size: 26px;
+}
+
+.app-title:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 25px;
+  height: 4px;
+  background: #cfb284;
+}
+
+.app-form-group {
+  margin-bottom: 15px;
+}
+
+.app-form-group.buttons {
+  margin-bottom: 0;
+  text-align: right;
+}
+
+.service-container {
+  height: 650px;  
+}
+
+.service-img1 img, 
+.service-img2 img, 
+.service-img3 img, 
+.service-img4 img, 
+.service-img5 img, 
+.service-img6 img{
+  width: 210px;
+  height: 200px;
+  border:2px solid #fff;
+  -moz-box-shadow: 0px 6px 5px #ccc;
+  -webkit-box-shadow: 0px 6px 5px #ccc;
+  box-shadow: 0px 6px 5px #ccc;
+  -moz-border-radius:190px;
+  -webkit-border-radius:190px;
+  border-radius:190px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.service-img1 img:hover, 
+.service-img2 img:hover,
+.service-img3 img:hover,
+.service-img4 img:hover, 
+.service-img5 img:hover, 
+.service-img6 img:hover {
+  transform: scale(1.1);
+}
+
+.service-img1 {
+  position: absolute;
+  left: 100px;
+  margin-top: 10px;
+}
+
+.service-img2 {
+  position: absolute;
+  left: 43%;
+  margin-top: 10px;
+}
+
+.service-img3 {
+  position: absolute;
+  right: 100px;
+  margin-top: 10px;
+}
+
+.service-img4 {
+  position: absolute;
+  left: 100px;
+  margin-top: 230px;
+}
+
+.service-img5 {
+  position: absolute;
+  left: 43%;
+  margin-top: 230px;
+}
+
+.service-img6 {
+  position: absolute;
+  right: 100px;
+  margin-top: 230px;
+}
+
+/* ----first image---- */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+.close {
+  color: #9C6137;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ----second image---- */
+.modal2 {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content2 {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+.close2 {
+  color: #9C6137;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close2:hover,
+.close2:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ----third image---- */
+.modal3 {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content3 {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+.close3 {
+  color: #9C6137;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close3:hover,
+.close3:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* ----fourth image---- */
+.modal4 {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content4 {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+.close4 {
+  color: #9C6137;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close4:hover,
+.close4:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* ----fifth image---- */
+.modal5 {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content5 {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+.close5 {
+  color: #9C6137;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close5:hover,
+.close5:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ----sixth image---- */
+.modal6 {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content6 {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+.close6 {
+  color: #9C6137;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close6:hover,
+.close6:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+p {
+	font-family: papyrus;
+	font-size: 30px;
+  color: #9C6137
+}
+</style>
+
+<body>
+  <div class="navigationbar">
+    <ul class="navigationbar">
+        <li><a href="home.html" class="nav-link text-uppercase font-weight-bold js-scroll-trigger">Home</a></li>
+        <li><a href="#about" class="nav-link text-uppercase font-weight-bold js-scroll-trigger"> About</a></li>
+        <li><a href="#services" class="nav-link text-uppercase font-weight-bold js-scroll-trigger"> Services</a></li>
+        <li><a href="contactus.html" class="nav-link text-uppercase font-weight-bold js-scroll-trigger"> Contact us</a></li>
+        <li><a href="StaffLogin.html"> Staff Login</a></li>
+        <li><a href="CustomerLogin.html"> Customer Login</a></li>
+        <li><a href="CustomerSignup.html"> Signup</a></li>
+    </ul>
+  </div>
+  <br><h1><br>One Paradise Massage<h1>
+  <div class="about">
+  <section id="about" class="slider-area"></section>
+  <h1 class="about-heading"><br><br>About</h1>
+  <p class="about-font-size">
+    Thank you for coming to our website. We really hope that these pages and our experienced hands may help you discover the relief you're seeking for. Everything is available from energy healing and pain management to massage spa services. We are passionate about using touch therapy to relieve people's discomfort. It makes little difference whether the problem is current, recurring, or long-standing. It also makes little difference if the discomfort is the result of a slip or fall, a car accident, surgery, arthritis, bursitis, or just regular aches and pains.<br>
+  </p>
+  </div>
+
+  <div class="services">
+    <section id="services" class="slider-area"></section>
+    <h1 class="services-heading"><br>Services</h1>
+    <div class="service-container">
+      <div class="service-img1" >
+        <img src="https://nadia4lifeuk.com/wp-content/uploads/2020/09/massage_therapist_pouring_oil_into_their_hand_jpg-600x390-1.jpeg" width="260px" height="180px" id="img1"><p>Swedish massage</p>
+      </div>
+      <div>
+        <div class="service-img2" >
+        <img src="https://images.squarespace-cdn.com/content/v1/5b6e3e582487fdba737c3200/1534032738128-UEH28LIDFS6NKBMTW9NM/deep_tissue_banner.jpg" width="260px" height="180px" id="img2"><p>Deep tissue massage</p>
+      </div>
+      <div>
+        <div class="service-img3" >
+        <img src="https://dp4g669tqdae4.cloudfront.net/content/uploads/2021/02/pregnant-woman-having-massage-in-spa-relax-a-massage-to-the-belly-of-a-pregnant-girl-1180595398_1258x837.jpeg" width="260px" height="180px" id="img3"><p>Prenatal massage</p>
+      </div><br>
+      <div class="service-img4" >
+        <img src="https://smb.ibsrv.net/imageresizer/image/article_manager/1200x1200/26233/127509/heroimage0.774931001563386131.jpg" width="260px" height="180px" id="img4"><p>Couplemassage</p>
+      </div>
+      <div>
+        <div class="service-img5" >
+        <img src="https://www.pthealth.ca/app/uploads/2016/09/trigger-point-therapy-881x441.jpg" width="260px" height="180px" id="img5"><p>Trigger point massage</p>
+      </div>
+      <div>
+        <div class="service-img6" >
+        <img src="https://www.sports-management-degrees.com/wp-content/uploads/2015/07/sportsmassage-1024x683.jpg" width="260px" height="180px" id="img6"><p>Sports massage</p>
+    
+      </div>
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p class="about-font-size">What is Swedish Massage? <br>
+            The goal of a typical Swedish massage is to calm you by working on your entire body. The qualified massage therapist will use a variety of strokes and methods while giving the massage. Long, connecting strokes in the same direction as the flow of blood toward the heart will be used.<br><br>
+            
+            Benefits of Swedish massage: <br>
+            Swedish massage therapy reduces stress while calming the muscles and improving blood oxygen levels. It can release joints, ease cramps, and increase blood flow. Swedish massage can help with several conditions, including asthma, arthritis, and chronic back pain. Anyone who works at a desk all day and suffers from a tight neck or regular headaches might benefit from this form of massage.
+            .</p>
+        </div>
+      </div>
+
+      <div id="myModal2" class="modal2">
+        <div class="modal-content2">
+          <span class="close2">&times;</span>
+          <p>What is deep tissue massage?<br>
+			A deep tissue massage can provide relief from persistent pain, sports injuries, and general aches and pains. To eliminate and relieve discomfort, a deep tissue massage concentrates on the inner layers of your muscles. Compared to a Swedish massage, which emphasizes relaxation and tension relief, more pressure is applied. Your licensed massage therapist may apply pressure on your muscles with their elbows and forearms in addition to kneading them with their palms and fingers.<br><br>
+
+			Benefits of deep tissue massage: <br>
+			Pain from musculoskeletal conditions or chronic strain is relieved by a deep tissue therapeutic massage. It can help you heal from a sports injury or relieve discomfort brought on by postural issues. For athletes or those with persistent pain issues like fibromyalgia, deep tissue massage is ideal. 
+</p>
+        </div>
+      </div>
+
+      <div id="myModal3" class="modal3">
+        <div class="modal-content3">
+          <span class="close3">&times;</span>
+          <p>What is parental massage? <br>
+			Pregnant women who have completed their first trimester receive a prenatal massage. With the help of the pillows that are provided, you will lie on your side or back while receiving the massage. Your certified massage therapist will apply soothing strokes during your appointment, much like a Swedish massage.<br><br>
+
+			Benefits of parental massage:<br>
+			Prenatal massage helps relieve the aches and pains that are frequently related to pregnancy as well as stress and edoema. Additionally, a prenatal massage helps ease melancholy and anxiety. 
+</p>
+        </div>
+      </div>
+
+      <div id="myModal4" class="modal4">
+        <div class="modal-content4">
+          <span class="close4">&times;</span>
+          <p>What is couples massage works?<br>
+			Our certified massage therapists will carefully go over a confidential questionnaire with each of you before your couples session at One Paradise Massage. Any issues, unique requirements, and wishes will be discussed with your specific massage therapist. <br><br>
+
+			Benefits of couples massage:<br>
+			During a couples massage, you'll get the same sense of peace, renewal, and pain relief as you do during a solo massage. A couples massage can also strengthen your relationship. Natural hormones like oxytocin, serotonin, and dopamine are released during massage. 
+
+.</p>
+        </div>
+      </div>
+      
+      <div id="myModal5" class="modal5">
+        <div class="modal-content5">
+          <span class="close5">&times;</span>
+          <p>What is trigger point massage?<br>
+			Your muscles develop trigger points, which are sensitive regions of tense muscle fibres, because of injuries or overuse. They can grow wherever on your body (but are often found on your back). They are also known as muscle knots because some areas of the muscle stiffen. To relieve muscle tension and break up the hard knots, apply pressure by rubbing and pressing on these places. <br><br>
+
+			Benefits of trigger point massage: <br>
+			The tightest parts of your body can be released by trigger point massage, which also helps to relieve pain and improve flexibility, alignment, and posture. To provide relief, your licenced trigger point massage therapist will concentrate on the areas near the painful areas. 
+</p>
+        </div>
+      </div>
+
+      <div id="myModal6" class="modal6">
+        <div class="modal-content6">
+          <span class="close6">&times;</span>
+          <p>What is sport massage?<br>
+			A sports massage can be a full-body massage or might concentrate on particular areas, depending on the needs of the client. Your therapist will move your muscles, tendons, and ligaments using a variety of techniques in order to improve circulation and activate the nerves. <br><br>
+
+			Benefits of sports massage:<br>
+			A sports massage may speed up recovery time and aid in the treatment and prevention of injuries. It is more important to improve athletic performance than to unwind. Additionally, a sports massage can aid to relax muscles and improve flexibility.
+</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<div class="mapouter"><div class="gmap_canvas"><iframe width="1518" height="730" id="gmap_canvas" src="https://maps.google.com/maps?q=kota%20damansara&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.whatismyip-address.com/%22%3E</a><br><style>.mapouter{position:relative;text-align:right;height:730px;width:1518px;}</style><a href="https://www.embedgooglemap.net/%22%3Einsert google map html</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:730px;width:1518px;}</style></div></div>
+  
+
+      <div class="footer">
+    <div class="col-1">
+      
+    <div class="faq">
+      <a href="faq.html"> <img src="https://cdn.iconscout.com/icon/free/png-256/faq-document-1741072-1482755.png" width="60" height="60"></a>
+    </div>
+    <div class="rate">
+      <a href="rateus.html"> <img src="https://static.vecteezy.com/system/resources/previews/002/590/546/non_2x/hand-like-symbol-line-style-icon-free-vector.jpg" width="60" height="60"></a>
+    </div>
+    <h3><br><br>2022@OneParadiseMassage</h3><br>
+  </div>
+</div>
+
+  <script>
+    //img 1
+    var modal = document.getElementById("myModal");
+    var btn1 = document.getElementById("img1");
+    var span = document.getElementsByClassName("close")[0];
+
+    btn1.onclick = function() {
+      modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function(e) {
+      if (e.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+    //img 2
+    var modal2 = document.getElementById("myModal2");
+    var btn2 = document.getElementById("img2");
+    var span2 = document.getElementsByClassName("close2")[0];
+
+    btn2.onclick = function() {
+      modal2.style.display = "block";
+    }
+
+    span2.onclick = function() {
+      modal2.style.display = "none";
+    }
+
+    window.onclick = function(e) {
+      if (e.target == modal2) {
+        modal2.style.display = "none";
+      }
+    }
+
+    //img 3
+    var modal3 = document.getElementById("myModal3");
+    var btn3 = document.getElementById("img3");
+    var span3 = document.getElementsByClassName("close3")[0];
+
+    btn3.onclick = function() {
+      modal3.style.display = "block";
+    }
+
+    span3.onclick = function() {
+      modal3.style.display = "none";
+    }
+
+    window.onclick = function(e) {
+      if (e.target == modal3) {
+        modal3.style.display = "none";
+      }
+    }
+
+    //img 4
+    var modal4 = document.getElementById("myModal4");
+    var btn4 = document.getElementById("img4");
+    var span4 = document.getElementsByClassName("close4")[0];
+
+    btn4.onclick = function() {
+      modal4.style.display = "block";
+    }
+
+    span4.onclick = function() {
+      modal4.style.display = "none";
+    }
+
+    window.onclick = function(e) {
+      if (e.target == modal4) {
+        modal4.style.display = "none";
+      }
+    }
+
+    //img 5
+    var modal5 = document.getElementById("myModal5");
+    var btn5 = document.getElementById("img5");
+    var span5 = document.getElementsByClassName("close5")[0];
+
+    btn5.onclick = function() {
+      modal5.style.display = "block";
+    }
+
+    span5.onclick = function() {
+      modal5.style.display = "none";
+    }
+
+    window.onclick = function(e) {
+      if (e.target == modal5) {
+        modal5.style.display = "none";
+      }
+    }
+
+
+       //img 6
+    var modal6 = document.getElementById("myModal6");
+    var btn6 = document.getElementById("img6");
+    var span6 = document.getElementsByClassName("close6")[0];
+
+    btn6.onclick = function() {
+      modal6.style.display = "block";
+    }
+
+    span6.onclick = function() {
+      modal6.style.display = "none";
+    }
+
+    window.onclick = function(e) {
+      if (e.target == modal6) {
+        modal6.style.display = "none";
+      }
+    }
+
+  </script>
+
+</body>
+
+</html>

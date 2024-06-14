@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  background-image: url("https://img95.699pic.com/xsj/06/iw/k8.jpg!/fh/3000");
+  background-repeat: no-repeat;
+  background-size: 1500px 850px;
+  
+}
+
+h1 {
+    font-family: papyrus;
+		font-size: 45px;
+		text-align: center;
+    color: #9C6137;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+    height: 750px;
+    width: 400px;
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+  
+}
+
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+input[type=number] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+input[type=date] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+.timeselect select{
+  outline: none;
+  background-color: transparent;
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+input[type=submit] {
+  background-color: #9c6137;
+  border: none;
+  color: white;
+  font-size: 15px;
+  padding: 15px;
+  width: 100%;
+  margin: 5px 0 20px 0;
+  display: inline-block;
+  cursor: pointer;
+}
+
+hr {
+  border: 1px solid white;
+  margin-bottom: 25px;
+}
+
+a {
+  color: dodgerblue;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+.signup {
+  color: black;
+  font-size: 15px;
+  font-family: 'Poppins',sans-serif;
+  text-align: center;
+}
+
+.signup a{
+  color: #7E7E7E;
+  text-decoration: none;
+}
+
+.signup a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<form action="/action_page.php">
+  <div class="container">
+    <title>Book Now!</title>
+    <h1>Reservations</h1>
+    <hr>
+    <label for="name">Name:</label><br>
+    <input type="text" placeholder="Enter Name*" name="name">
+    <label for="quantity"><br>Quantity(1-5):</label>
+    <input type="number" id="quantity" name="quantity" min="1" max="5"><br>
+    <label for="datemin"><br>Date:</label><br>
+    <input type="date" id="datemin" name="datemin" id="d"><br>
+    <label for="time">Time:</label>
+    <div class="timeselect">
+    <select name="time" id="time">
+    <option value="time1">10.30am - 12.00pm</option>
+    <option value="time2">12.30pm - 2.00pm</option>
+    <option value="time3">2.30pm - 4.00pm</option>
+    <option value="time4">4.30pm - 6.00pm</option>
+    <option value="time5">6.30pm - 8.00pm</option>
+    <option value="time6">8.30pm - 10.00pm</option>
+    <option value="time7">10.30pm - 12.00am</option>
+    </select>
+  </div>
+
+    <input type="submit" value="Book Now">
+
+  </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+</head>
+<style>
+  body{
+    font-family: 'Work Sans', sans-serif;
+    background-color: #fffde7;;
+}
+.faq-heading{
+    border-bottom: #777;
+    padding: 20px 60px;
+}
+.faq-container{
+display: flex;
+justify-content: center;
+flex-direction: column;
+
+}
+.hr-line{
+  width: 60%;
+  margin: auto;
+  
+}
+.faq-page {
+    color: #444;
+    cursor: pointer;
+    padding: 30px 20px;
+    width: 60%;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin: auto;
+
+}
+.faq-body{
+    margin: auto;
+    text-align: left; 
+   width: 50%; 
+   padding: auto;
+   
+}
+.active,
+.faq-page:hover {
+    background-color: #cfb284 ;
+}
+
+.faq-body {
+    font-family: 'Work Sans', sans-serif;
+    display: none;
+    overflow: hidden;
+}
+
+.faq-page:after {
+    content: '\02795';
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2796";
+}
+h1{
+    text-align: center;
+}
+.bline{
+    border-top: 2px solid #cfb284;
+    width: 50%;
+    margin: auto;
+    height: 20px;
+}
+i{
+    font-size: 50px;
+    position: absolute;
+    bottom: 720px;
+    color: #b0954c;
+}
+
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ PAGE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <main>
+
+        <h1 class="faq-heading">Frequently Asked Questions</h1>
+        <div class="bline"></div>
+        <section class="faq-container">
+            <div class="faq-one">
+                <h1 class="faq-page">What if I am late arriving to my appointment?</h1>
+                <div class="faq-body">
+                    <p>Your session can be cut short if you arrive late so that people with appointments after yours can get through. While we will make every effort to offer you with the services you have scheduled, if you are late, we cannot promise the whole amount of time. You must make the whole amount due for the services you have scheduled.</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+            <div class="faq-two">
+                <h1 class="faq-page">What should I do if I need to cancel my appointment?</h1>
+                <div class="faq-body">
+                    <p>If you need to reschedule your appointment, you can log into your account and make changes anytime.  For late notice cancellations, please call us directly at 608-123-4567 as soon as possible.</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+            <div class="faq-three">
+          <h1 class="faq-page">What forms of payment do you accept?</h1>
+                <div class="faq-body">
+                    <p>A credit or debit card is required to reserve your appointment, however you are not charged for anything until after the appointment is completed.  After your appointment, you can choose another form of payment. You can also stop by our front desk to pay a 50% cash deposit if you would like to reserve an appointment without a credit/debit card.</p>
+                </div>
+            </div>
+             <hr class="hr-line">
+            <div class="faq-four">
+                <h1 class="faq-page">What if I fall asleep and drool or snore? </h1>
+                <div class="faq-body">
+                    <p>You might be feeling stressed and sleep-deprived, so falling asleep is normal once you're in a relaxed state. There’s zero judgment from us if you snore. We're pleased you're relaxed enough to fall asleep, and we won’t mention it.</p>
+                </div>
+            </div>
+             <hr class="hr-line">
+            <div class="faq-five">
+                <h1 class="faq-page">Is it ok to ask for more or less pressure?</h1>
+                <div class="faq-body">
+                    <p>Yes! A good massage therapist will check in with you during your massage to make sure the pressure is okay. Be mindful that massage doesn't have to cause you pain to be effective. Some massage techniques are pretty gentle. But do speak up and ask your therapist if you'd like more or less pressure during your session. We won't be offended!</p>
+                </div>
+            </div>
+             <hr class="hr-line">
+            <div class="faq-six">
+                <h1 class="faq-page">What if I need the bathroom?</h1>
+                <div class="faq-body">
+                    <p>We recommend going to the bathroom before your session, but it can occasionally happen that you'll need to go during the massage. We want you to be relaxed, so if you're focusing on holding it in, it’ll interfere with your experience. So do speak up, and we'll let you know where the bathroom is.</p>
+                </div>
+            </div>
+             <hr class="hr-line">
+            <div class="faq-seven">
+                <h1 class="faq-page">What happens if I’m ticklish?</h1>
+                <div class="faq-body">
+                    <p>Let your massage therapist know before your session. They can use firm, slow pressure or, if you're extremely sensitive, they can avoid your tickle spots.</p>
+                </div>
+            </div>
+             <hr class="hr-line">
+            <div class="faq-eight">
+                <h1 class="faq-page">What should I expect during my first massage visit?</h1>
+                <div class="faq-body">
+                    <p>IYour massage therapist should require you to fill out a health history form. They may also ask more in-depth questions to establish which areas you would like focused on, or if there are any specific conditions needing to be addressed.</p>
+                </div>
+            </div>
+             <hr class="hr-line">
+            <div class="faq-nine">
+                <h1 class="faq-page">Will the massage hurt?</h1>
+                <div class="faq-body">
+                    <p>In general, massages should not hurt. In fact, if you are in pain during a massage, this may cause your muscles to seize up, making the relaxing effects more difficult to achieve. If the pressure is too intense, speak up immediately so your therapist can adjust.</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+            <div class="faq-ten">
+                <h1 class="faq-page">What if I have body acne, skin conditions, or forgot to shave?</h1>
+                <div class="faq-body">
+                    <p>Rest assured, massage therapists have seen and felt it all! Please do not feel uncomfortable or embarrassed. Your massage therapist is focused on creating a relaxing and therapeutic experience for you, and you cannot relax if you are anxious about your body’s appearance.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <a href="home.html" class="previous"><i class="fa-solid fa-arrow-left-long"></i></a>
+  <script>
+var faq = document.getElementsByClassName("faq-page");
+var i;
+
+for (i = 0; i < faq.length; i++) {
+    faq[i].addEventListener("click", function () {
+        
+        this.classList.toggle("active");
+        var body = this.nextElementSibling;
+        if (body.style.display === "block") {
+            body.style.display = "none";
+        } else {
+            body.style.display = "block";
+        }
+    });
+}
+  </script>
+</body>
+
+
+</html>   
